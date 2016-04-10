@@ -108,7 +108,7 @@ public class TemperatureConverter extends JFrame {
 		try {
 			double d = Double.parseDouble(degrees);
 		} catch (NumberFormatException ex) {
-			System.out.println(ex.toString());
+			ex.printStackTrace();
 			return false;
 		}
 		return true;
