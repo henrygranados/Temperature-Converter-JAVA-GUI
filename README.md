@@ -1,4 +1,4 @@
-# Temperature-Converter-JAVA-GUI
+# Temperature-Converter-Java-GUI
 
 This is a Temperature Converter Java GUI application.
 
