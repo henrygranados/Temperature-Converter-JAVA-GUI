@@ -66,7 +66,7 @@ public class TemperatureConverter extends JFrame {
 		public void actionPerformed(ActionEvent event) {
 			double degrees = 0;
 			if (event.getSource() == FahToCelButton) {
-				if (isUsersInputANumber(FahrTextField.getText()) == true) {
+				if (isUsersInputANumber(FahrTextField.getText())) {
 					degrees = Double.parseDouble(FahrTextField.getText());
 					int conFahToCel = (int) ((5.0 / 9.0 * (degrees - 32)));
 					CelsTextField.setText(conFahToCel + " °C");
@@ -74,7 +74,7 @@ public class TemperatureConverter extends JFrame {
 					FahrTextField.selectAll();
 				}
 
-				else if (isUsersInputANumber(FahrTextField.getText()) == false) {
+				else if (!isUsersInputANumber(FahrTextField.getText())) {
 					FahrTextField.setText("Error: Only numbers");
 				}
 			}
@@ -85,13 +85,13 @@ public class TemperatureConverter extends JFrame {
 		public void actionPerformed(ActionEvent event) {
 			double degrees = 0;
 			if (event.getSource() == CelToFahButton) {
-				if (isUsersInputANumber(CelsTextField.getText()) == true) {
+				if (isUsersInputANumber(CelsTextField.getText())) {
 					degrees = Double.parseDouble(CelsTextField.getText());
 					int conCelToFah = (int) ((9.0 / 5.0 * (degrees + 32)));
 					FahrTextField.setText(conCelToFah + " °F");
 					CelsTextField.requestFocus();
 					CelsTextField.selectAll();
-				} else if (isUsersInputANumber(CelsTextField.getText()) == false) {
+				} else if (!isUsersInputANumber(CelsTextField.getText())) {
 					CelsTextField.setText("Error: Only numbers");
 				}
 			}
